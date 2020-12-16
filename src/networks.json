@@ -1,0 +1,12 @@
+{
+    "rinkeby": {
+        "chain": "rinkeby",
+        "params": {
+            "name": "ethereum-rinkeby",
+            "networkId": 4,
+            "chainId": 4
+        },
+        "hardfork": "istanbul",
+        "jsonRpcUrl": "https://rinkeby.infura.io/v3/c220024eb7b84c2b965c426c7eba75b9"
+    }
+}
