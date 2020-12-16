@@ -1,5 +1,7 @@
 ## Use demo.eth when creating wallet to test wallet
 
+![https://github.com/claytonsavage/Comp-Wallet/blob/master/public/Screen%20Shot%202020-12-16%20at%2012.02.21%20PM.png?raw=true](https://github.com/claytonsavage/Comp-Wallet/blob/master/public/Screen%20Shot%202020-12-16%20at%2012.02.21%20PM.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
