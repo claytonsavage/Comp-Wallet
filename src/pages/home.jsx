@@ -81,7 +81,7 @@ class Home extends React.Component {
                 </div>
                     <h3 className="transaction-header" style={{textAlign:'center'}}>Transaction History</h3>
                 <div className="currency">
-                    { transactions.map((transaction)=> <div><li>Transfer: {transaction.transfers[0].transfer_type}</li><li>Amount: ${transaction.transfers[0].delta_quote}</li><li>Date: {transaction.transfers[0].block_signed_at.split('T')[0]}</li></div> ) }
+                    { transactions.map((transaction)=> <div><li>Transfer: {transaction.transfers[0].transfer_type}</li><li>Amount: ${transaction.transfers[0].delta_quote ? transaction.transfers[0].delta_quote.toFixed(2) : undefined}</li><li>Date: {transaction.transfers[0].block_signed_at.split('T')[0]}</li></div> ) }
                 </div>
             </div>
         </div>)
