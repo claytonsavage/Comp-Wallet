@@ -36,7 +36,9 @@ class CreditCard extends React.Component {
                             </CopyToClipboard>
                         </div>
                         <div className="terms">
-                            <p><br></br></p>
+                            <CopyToClipboard text={this.props.address}>
+                            <p style={{cursor: 'pointer', textDecoration: 'overline'}}>Copy address to clipboard.</p>
+                            </CopyToClipboard>
                             <p>Keep your Private Key stored somewhere safe. click on Private Key to copy to clipboard.</p>
                         </div>
                     </div>
