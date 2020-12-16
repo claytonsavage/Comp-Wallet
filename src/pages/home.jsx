@@ -76,14 +76,12 @@ class Home extends React.Component {
                     <h3 className="currency-header" style={{textAlign:'center'}}>Currency</h3>
                 <div className="transactions">
                     <br></br>
-                    { items.map((currency, index) =>  currency.contract_name ? <li onClick={()=>{ this.setState({balance: parseInt(currency.balance) / Math.pow(10, currency.contract_decimals), currency: currency.contract_name, ticker: currency.contract_ticker_symbol, contractAddress: currency.contract_address}); covalent.getTransactions(this.state.address, currency.contract_address).then((result)=>{this.setState({transactions: result})}) }} key={currency.contract_name + index}><span style={{color: '#f52c8a'}}>{currency.contract_name}</span>: {parseInt(currency.balance) / Math.pow(10, currency.contract_decimals)}</li>: undefined ) }
+                    { items.map((currency, index) =>  currency.contract_name ? <li onClick={()=>{ this.setState({balance: parseInt(currency.balance) / Math.pow(10, currency.contract_decimals), currency: currency.contract_name, ticker: currency.contract_ticker_symbol, contractAddress: currency.contract_address}); covalent.getTransactions(this.state.address, currency.contract_address).then((result)=>{this.setState({transactions: result})}) }} key={currency.contract_name + index}><span style={{color: '#f52c8a'}}>{currency.contract_name}</span></li>: undefined ) }
                     <br></br>
                 </div>
                     <h3 className="transaction-header" style={{textAlign:'center'}}>Transaction History</h3>
                 <div className="currency">
-                    <br></br>
-                    { transactions.map((transaction)=> <li><span style={{color: '#f52c8a'}}>{transaction.transfers[0].transfer_type}</span> - ${transaction.transfers[0].delta_quote} - {transaction.transfers[0].block_signed_at.split('T')[0]}</li> ) }
-                    <br></br>
+                    { transactions.map((transaction)=> <div><li>Transfer: {transaction.transfers[0].transfer_type}</li><li>Amount: ${transaction.transfers[0].delta_quote}</li><li>Date: {transaction.transfers[0].block_signed_at.split('T')[0]}</li></div> ) }
                 </div>
             </div>
         </div>)

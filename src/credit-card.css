@@ -348,7 +348,7 @@ button:last-of-type:hover {
   box-shadow: 0px 5px 25px black;
   z-index: 99;
   color: white;
-  height: 46px;
+  height: 48px;
 }
 
 .nav h3 {
@@ -363,14 +363,14 @@ button:last-of-type:hover {
   bottom: 50px;
   border-radius: 20px;
   background-color: rgba(100, 100, 100, 0.685);
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.363);
+  box-shadow: 0px 5px 25px inset rgba(0, 0, 0, 0.363);
   z-index: 99;
   color: white;
-  opacity: 0.4;
   transition: 0.6s;
   font-family: 'cc font';
   overflow: scroll;
-  max-width: 250px;
+  width: 250px;
+  border: 1px solid white;
 }
 
 .currency {
@@ -380,28 +380,31 @@ button:last-of-type:hover {
   bottom: 50px;
   border-radius: 20px;
   background-color: rgb(255 255 255 / 17%);
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.363);
+  box-shadow: 0px 5px 25px inset rgba(0, 0, 0, 0.363), 0px 10px 0px -5px #00000091;
   z-index: 99;
   color: white;
-  opacity: 0.4;
   transition: 0.6s;
   font-family: 'cc font';
   overflow: scroll;
   overflow-x: hidden;
-  max-width: 250px;
+  border: 1px solid white;
 }
 
-.currency li {
+.currency div {
   list-style: none;
-  font-size: 11px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    font-size: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
+    padding: 20px 50px;
+    box-shadow: 0px 0px 50px 0px inset #f4288a;
+    border-bottom: 1px solid;
 }
 
-.currency li:hover {
+.currency div:hover {
   cursor: pointer;
-  background-color: #ffffff57;
+  background-color: #22bcff;
+  box-shadow: 0px 0px 20px 0px inset #ffffff;
 }
 
 .transactions li {
@@ -410,6 +413,7 @@ button:last-of-type:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  padding: 10px;
 }
 
 .transactions li:hover {
@@ -419,13 +423,13 @@ button:last-of-type:hover {
 
 .currency:hover {
   opacity: 1;
-  box-shadow: 0px 5px 25px black;
+  box-shadow: 0px 5px 25px inset black;
   transition: 0.6s;
 }
 
 .transactions:hover {
   opacity: 1;
-  box-shadow: 0px 5px 25px black;
+  box-shadow: 0px 5px 25px inset black;
   transition: 0.6s;
 }
 
